@@ -20,7 +20,7 @@ public class MenuAluno extends javax.swing.JPanel {
         jButtonCadastrarEstagiario = new javax.swing.JButton();
         jLabelTitulo = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(705, 579));
+        setPreferredSize(new java.awt.Dimension(735, 532));
 
         jButtonCadastrarAluno.setText("Cadastrar Aluno");
         jButtonCadastrarAluno.addActionListener(new java.awt.event.ActionListener() {

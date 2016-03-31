@@ -41,10 +41,6 @@ public class CadastroEstagiario extends javax.swing.JPanel {
         jButtonVoltar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableEstagiario = new javax.swing.JTable();
-        jButtonPrimeiro = new javax.swing.JButton();
-        jButtonAnterior = new javax.swing.JButton();
-        jButtonProximo = new javax.swing.JButton();
-        jButtonUltimo = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 18)); // NOI18N
         jLabel1.setText("Estagiários");
@@ -98,34 +94,6 @@ public class CadastroEstagiario extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTableEstagiario);
 
-        jButtonPrimeiro.setText("Primeiro");
-        jButtonPrimeiro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPrimeiroActionPerformed(evt);
-            }
-        });
-
-        jButtonAnterior.setText("Anterior");
-        jButtonAnterior.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAnteriorActionPerformed(evt);
-            }
-        });
-
-        jButtonProximo.setText("Próximo");
-        jButtonProximo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonProximoActionPerformed(evt);
-            }
-        });
-
-        jButtonUltimo.setText("Último");
-        jButtonUltimo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonUltimoActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -133,49 +101,36 @@ public class CadastroEstagiario extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelPeriodo)
-                            .addComponent(jLabelCurso)
-                            .addComponent(jLabelNome)
-                            .addComponent(jLabelMatricula)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldPeriodo, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
-                            .addComponent(jTextFieldCurso)
-                            .addComponent(jTextFieldNome)
-                            .addComponent(jTextFieldMatricula))
-                        .addGap(73, 73, 73))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57))))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(274, 274, 274)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(74, 74, 74)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelMatricula)
+                            .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabelCurso)
+                                .addComponent(jLabelNome))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonPrimeiro, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(jButtonAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(65, 65, 65)
-                                .addComponent(jButtonProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(73, 73, 73)
-                                .addComponent(jButtonUltimo, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabelPeriodo)))
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(jButtonAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(61, 61, 61)
+                                .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(62, 62, 62)
+                                .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldPeriodo, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldCurso)
+                            .addComponent(jTextFieldMatricula)
+                            .addComponent(jTextFieldNome))))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,7 +143,7 @@ public class CadastroEstagiario extends javax.swing.JPanel {
                     .addComponent(jLabelMatricula))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelNome))
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -206,13 +161,7 @@ public class CadastroEstagiario extends javax.swing.JPanel {
                     .addComponent(jButtonVoltar))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonPrimeiro)
-                    .addComponent(jButtonAnterior)
-                    .addComponent(jButtonProximo)
-                    .addComponent(jButtonUltimo))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -292,77 +241,6 @@ public class CadastroEstagiario extends javax.swing.JPanel {
         AulaQualidade.janela.setContentPane(AulaQualidade.MenuAluno);
     }//GEN-LAST:event_jButtonVoltarActionPerformed
 
-    private void jButtonPrimeiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrimeiroActionPerformed
-        // TODO add your handling code here:
-        try {
-            acessoEstagiario.result.isFirst();
-            jTextFieldMatricula.setText(acessoEstagiario.result.getString("matricula"));
-            jTextFieldNome.setText(acessoEstagiario.result.getString("nome"));
-            jTextFieldCurso.setText(acessoEstagiario.result.getString("curso"));
-            jTextFieldPeriodo.setText(acessoEstagiario.result.getString("periodo"));
-
-            if (acessoEstagiario.result.isFirst()) {
-                jButtonPrimeiro.setEnabled(true);
-                jButtonProximo.setEnabled(false);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }//GEN-LAST:event_jButtonPrimeiroActionPerformed
-
-    private void jButtonAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnteriorActionPerformed
-        // TODO add your handling code here:
-        try {
-            acessoEstagiario.result.previous();
-            jTextFieldMatricula.setText(acessoEstagiario.result.getString("matricula"));
-            jTextFieldNome.setText(acessoEstagiario.result.getString("nome"));
-            jTextFieldCurso.setText(acessoEstagiario.result.getString("curso"));
-            jTextFieldPeriodo.setText(acessoEstagiario.result.getString("periodo"));
-
-            if (acessoEstagiario.result.previous()) {
-                jButtonProximo.setEnabled(false);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }//GEN-LAST:event_jButtonAnteriorActionPerformed
-
-    private void jButtonProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProximoActionPerformed
-        // TODO add your handling code here:
-        try {
-            while (acessoEstagiario.result.next()) {
-                jTextFieldMatricula.setText(acessoEstagiario.result.getString("matricula"));
-                jTextFieldNome.setText(acessoEstagiario.result.getString("nome"));
-                jTextFieldCurso.setText(acessoEstagiario.result.getString("curso"));
-                jTextFieldPeriodo.setText(acessoEstagiario.result.getString("periodo"));
-                if (acessoEstagiario.result.next()) {
-                    jButtonProximo.setEnabled(false);
-                }
-                jButtonAnterior.setEnabled(true);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }//GEN-LAST:event_jButtonProximoActionPerformed
-
-    private void jButtonUltimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUltimoActionPerformed
-        // TODO add your handling code here:
-        try {
-            while (acessoEstagiario.result.isLast()) {
-                jTextFieldMatricula.setText(acessoEstagiario.result.getString("matricula"));
-                jTextFieldNome.setText(acessoEstagiario.result.getString("nome"));
-                jTextFieldCurso.setText(acessoEstagiario.result.getString("curso"));
-                jTextFieldPeriodo.setText(acessoEstagiario.result.getString("periodo"));
-                if (acessoEstagiario.result.isLast()) {
-                    jButtonUltimo.setEnabled(false);
-                }
-                jButtonAnterior.setEnabled(true);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }//GEN-LAST:event_jButtonUltimoActionPerformed
-
     public void preencherTabela() {
         ArrayList dados = new ArrayList();
         String[] colunas = {"Matrícula", "Nome", "Curso", "Período"};
@@ -381,13 +259,9 @@ public class CadastroEstagiario extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAnterior;
     private javax.swing.JButton jButtonAtualizar;
     private javax.swing.JButton jButtonExcluir;
-    private javax.swing.JButton jButtonPrimeiro;
-    private javax.swing.JButton jButtonProximo;
     private javax.swing.JButton jButtonSalvar;
-    private javax.swing.JButton jButtonUltimo;
     private javax.swing.JButton jButtonVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCurso;
